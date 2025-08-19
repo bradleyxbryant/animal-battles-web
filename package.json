@@ -1,10 +1,13 @@
 {
   "name": "animal-battles-web",
   "private": true,
+  "version": "0.1.0",
   "scripts": {
     "dev": "next dev -p 3000",
     "build": "next build",
-    "start": "next start -p 3000"
+    "start": "next start -p 3000",
+    "typecheck": "tsc --noEmit",
+    "postinstall": "next telemetry disable"
   },
   "dependencies": {
     "@supabase/supabase-js": "2.45.4",
@@ -13,5 +16,14 @@
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "zod": "3.23.8"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5",
+    "@types/node": "^20.11.30",
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22"
+  },
+  "engines": {
+    "node": ">=18.17.0"
   }
 }
